@@ -1,15 +1,93 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+<x-dashboard-main>
+    <x-slot name="titulo">
+        - Dashboard
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+    <x-slot name="sidebar">
+       <x-sidebar/>
+    </x-slot>
+    
+        <x-nav-user/>
+        <h1 class="text-primary text-center">¡Hola {{Auth::user()->name}}, Bienvenid@!</h1>
+
+        <x-row>
+
+            <div class="col-md-6">
+                <x-card class="m-2 bg-white">
+                    <div class="d-flex flex-column align-items-center mb-2">
+                        <img src="{{url('assets/img/sobre.png')}}" alt="" width="100">
+                    </div>
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                </x-card>
             </div>
-        </div>
-    </div>
-</x-app-layout>
+            
+            <div class="col-md-6">
+                <x-card class="m-2 bg-tertiary">
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="{{url('assets/img/campana.png')}}" alt="" width="100">
+                    </div>
+                </x-card>
+            </div>
+
+            <div class="col-md-4">
+                <x-card class="m-2 bg-white">
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                </x-card>
+            </div>
+
+            <div class="col-md-4">
+                <x-card class="m-2 bg-white">
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                </x-card>
+            </div>
+
+            <div class="col-md-4">
+                <x-card class="m-2 bg-secondary">
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                </x-card>
+            </div>
+
+            <div class="col-md-8">
+                <x-card class="m-2 bg-secondary">
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="{{url('assets/img/lentes.png')}}" alt="" width="100">
+                    </div>
+                </x-card>
+            </div>
+
+            <div class="col-md-4">
+                <x-card class="m-2 bg-white">
+                    <p class="text-center">
+                        Esta es la página de inicio de los vendedores, acá iría información útil acerca de clientes, <br>
+                        notificaciones, etc... acordar qué información poner aquí.
+                    </p>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="{{url('assets/img/user-default.png')}}" alt="" width="100">
+                    </div>
+                </x-card>
+            </div>
+
+        </x-row>
+
+        <x-dashboard-footer/>
+</x-dashboard-main>
